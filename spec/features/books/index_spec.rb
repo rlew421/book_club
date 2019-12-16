@@ -42,35 +42,35 @@ RSpec.describe 'books index page' do
         expect(page).to have_content(hhg.title)
         expect(page).to have_content("Publication Year: #{hhg.publication_year}")
         expect(page).to have_content("Page Count: #{hhg.pages}")
-        expect(page).to have_content("Author: #{douglas_adams.name}")
+        expect(page).to have_content("Written by:\n#{douglas_adams.name}")
       end
 
       within "#book-#{norwegian_wood.id}" do
         expect(page).to have_content(norwegian_wood.title)
         expect(page).to have_content("Publication Year: #{norwegian_wood.publication_year}")
         expect(page).to have_content("Page Count: #{norwegian_wood.pages}")
-        expect(page).to have_content("Author: #{haruki_murakami.name}")
+        expect(page).to have_content("Written by:\n#{haruki_murakami.name}")
       end
 
       within "#book-#{kafka.id}" do
         expect(page).to have_content(kafka.title)
         expect(page).to have_content("Publication Year: #{kafka.publication_year}")
         expect(page).to have_content("Page Count: #{kafka.pages}")
-        expect(page).to have_content("Author: #{haruki_murakami.name}")
+        expect(page).to have_content("Written by:\n#{haruki_murakami.name}")
       end
 
       within "#book-#{shining.id}" do
         expect(page).to have_content(shining.title)
         expect(page).to have_content("Publication Year: #{shining.publication_year}")
         expect(page).to have_content("Page Count: #{shining.pages}")
-        expect(page).to have_content("Author: #{stephen_king.name}")
+        expect(page).to have_content("Written by:\n#{stephen_king.name}")
       end
 
       within "#book-#{talisman.id}" do
         expect(page).to have_content(talisman.title)
         expect(page).to have_content("Publication Year: #{talisman.publication_year}")
         expect(page).to have_content("Page Count: #{talisman.pages}")
-        expect(page).to have_content("Author: #{stephen_king.name}")
+        expect(page).to have_content("Written by:\n#{stephen_king.name}\n#{peter_straub.name}")
       end
     end
   end
